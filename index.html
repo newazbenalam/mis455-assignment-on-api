@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>GeoCountries</title>
+</head>
+
+<body>
+  <nav>
+    <a href="" onclick="window.location.reload()" class="nav-title">GeoCountries</a>
+    <!-- <div>
+      <a href="#hero" class="day-bar active">Today</a>
+      <a href="#week" class="day-bar #active">Week</a>
+    </div> -->
+    <input class="text-area" hidden placeholder="Location..." id="searchbar" data-vaue="">
+    <div>
+      <!-- <a href="#" class="toggle-temp">27°C</a> -->
+      <a href="#" onclick="darkMode()" class="dark-mode">☾</a>
+      <a href="#"><img onclick="clearKey(), window.location.reload()" class="profile-img"
+          src="public/images/pngwing.com.png" alt="profile_image"></a>
+    </div>
+  </nav>
+  <section id="hero">
+    <search-row>
+      <div>
+        <input class="w-card-search" type="search" name="" id="searchid">
+        <input type="button" value="Search" class="search-btn">
+      </div>
+      <br><br>
+      <div>
+        <p style="margin-bottom: 15px; filter: drop-shadow(0px 0px 100px #929094bb); font-weight: 500;">Popular Search
+        </p>
+      </div>
+      <br>
+      <div class="flex-view-popular">
+        <div class="item-popular">
+          <p>Southern Asia</p>
+          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/bd.png" alt=""> Bangladesh</p>
+          <p >Capital: Dhaka</p>
+          <p >Language: Bengali</p>
+          <p >Currencies: Taka / BDT / ৳</p>
+          <p >UTC+06:00</p>
+          <p >More</p>
+        </div>
+        <div class="item-popular">
+          <p>Southern Asia</p>
+          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/bd.png" alt=""> Bangladesh</p>
+          <p >Capital: Dhaka</p>
+          <p >Language: Bengali</p>
+          <p >Currencies: Taka / BDT / ৳</p>
+          <p >UTC+06:00</p>
+        </div>
+        <div class="item-popular">
+          <p>Southern Asia</p>
+          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/bd.png" alt=""> Bangladesh</p>
+          <p >Capital: Dhaka</p>
+          <p >Language: Bengali</p>
+          <p >Currencies: Taka / BDT / ৳</p>
+          <p >UTC+06:00</p>
+        </div>
+        <div class="item-popular">
+          <p>Southern Asia</p>
+          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/bd.png" alt=""> Bangladesh</p>
+          <p >Capital: Dhaka</p>
+          <p >Language: Bengali</p>
+          <p >Currencies: Taka / BDT / ৳</p>
+          <p >UTC+06:00</p>
+        </div>
+        <div class="item-popular">
+          <p>Southern Asia</p>
+          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/bd.png" alt=""> Bangladesh</p>
+          <p >Capital: Dhaka</p>
+          <p >Language: Bengali</p>
+          <p >Currencies: Taka / BDT / ৳</p>
+          <p >UTC+06:00</p>
+        </div>
+
+      </div>
+    </search-row>
+
+    <hero-row>
+      <div>
+        <div>
+          <img class="weather-preview" src="public/images/animated/rainy-2.svg" alt="temperature">
+          <div class=""
+            style="position: relative; display: flex; justify-content: center; flex-wrap: unwarp;  bottom: -50px; transform: scale(0.7); gap: 0; min-width: 253px; margin: auto;">
+            <div class="t-card h-card" style="background: none; width: 100px;">
+              <p>Min Temp</p>
+              <p id="min_temp" class="value" style=" font-size: 1.5rem;">5</p>
+            </div>
+            <div class="t-card h-card" style="background: none; width: 100px;">
+              <p>Max Temp</p>
+              <p id="max_temp" class="value" style=" font-size: 1.5rem;">5</p>
+            </div>
+          </div>
+          <h1 id="temp" class="temp-indicator">25°C</h1>
+          <div id="condition" style="font-weight: 500; opacity: 65%; position: relative; bottom: 30px;">
+            Haze
+          </div>
+        </div>
+        <span id="weekday" class="day">Monday, </span><span id="stime">16:00</span>
+        <div id="locat" class="location" style="padding-bottom: 45px;">
+          Dhakka, Null
+        </div>
+      </div>
+      <div>
+        <p style="margin-bottom: 15px; filter: drop-shadow(0px 0px 100px #929094bb); font-weight: 500;">5 Day Forecast
+        </p>
+        <div class="forecast-box">
+          <div class="w-card" style="padding-top: 15px;">
+            <p id="f-temp">time 1</p>
+            <img style="margin: -5px 0px -20px 0px; filter: opacity(70%);" src="public/images/animated/cloudy-day-3.svg"
+              alt="">
+            <div id="f-condition" style=" color: #585858;font-weight: 400;">
+              Haze
+            </div>
+            <div>
+              <span id="f-max-temp" class="value">15</span><span class="t-value">°C</span>
+            </div>
+            <div>
+              <span id="f-min-temp" class="value" style="opacity: 50%; font-size: 1.2rem;">15</span><span
+                class="t-value" style="bottom: 7px; font-size: 0.7rem;">°C</span>
+            </div>
+          </div>
+          <div class="w-card" style="padding-top: 15px;">
+            <p id="f-temp">time 1</p>
+            <img style="margin: -5px 0px -20px 0px; filter: opacity(70%);" src="public/images/animated/cloudy-day-3.svg"
+              alt="">
+            <div id="f-condition" style=" color: #585858;font-weight: 400;">
+              Haze
+            </div>
+            <div>
+              <span id="f-max-temp" class="value">15</span><span class="t-value">°C</span>
+            </div>
+            <div>
+              <span id="f-min-temp" class="value" style="opacity: 50%; font-size: 1.2rem;">15</span><span
+                class="t-value" style="bottom: 7px; font-size: 0.7rem;">°C</span>
+            </div>
+          </div>
+          <div class="w-card" style="padding-top: 15px;">
+            <p id="f-temp">time 1</p>
+            <img style="margin: -5px 0px -20px 0px; filter: opacity(70%);" src="public/images/animated/cloudy-day-3.svg"
+              alt="">
+            <div id="f-condition" style=" color: #585858;font-weight: 400;">
+              Haze
+            </div>
+            <div>
+              <span id="f-max-temp" class="value">15</span><span class="t-value">°C</span>
+            </div>
+            <div>
+              <span id="f-min-temp" class="value" style="opacity: 50%; font-size: 1.2rem;">15</span><span
+                class="t-value" style="bottom: 7px; font-size: 0.7rem;">°C</span>
+            </div>
+          </div>
+          <div class="w-card" style="padding-top: 15px;">
+            <p id="f-temp">time 1</p>
+            <img style="margin: -5px 0px -20px 0px; filter: opacity(70%);" src="public/images/animated/cloudy-day-3.svg"
+              alt="">
+            <div id="f-condition" style=" color: #585858;font-weight: 400;">
+              Haze
+            </div>
+            <div>
+              <span id="f-max-temp" class="value">15</span><span class="t-value">°C</span>
+            </div>
+            <div>
+              <span id="f-min-temp" class="value" style="opacity: 50%; font-size: 1.2rem;">15</span><span
+                class="t-value" style="bottom: 7px; font-size: 0.7rem;">°C</span>
+            </div>
+          </div>
+          <div class="w-card" style="padding-top: 15px;">
+            <p id="f-temp">time 1</p>
+            <img style="margin: -5px 0px -20px 0px; filter: opacity(70%);" src="public/images/animated/cloudy-day-3.svg"
+              alt="">
+            <div id="f-condition" style=" color: #585858;font-weight: 400;">
+              Haze
+            </div>
+            <div>
+              <span id="f-max-temp" class="value">15</span><span class="t-value">°C</span>
+            </div>
+            <div>
+              <span id="f-min-temp" class="value" style="opacity: 50%; font-size: 1.2rem;">15</span><span
+                class="t-value" style="bottom: 7px; font-size: 0.7rem;">°C</span>
+            </div>
+          </div>
+        </div>
+        <p id="highlight" style="margin-bottom: 15px; filter: drop-shadow(0px 0px 100px #929094bb); font-weight: 500;">
+          Today's Highlight</p>
+        <div>
+          <div class="weekly-card">
+            <div class="h-card">
+              <p>Clouds</p>
+              <p id="clouds" class="value">1020</p>
+            </div>
+            <div class="h-card">
+              <p>Wind Status</p>
+              <p id="wind" class="value" style="top: -5px;">7.70</p>
+              <p style="opacity: 75%; color: var(--text-color); position: relative; bottom: 7px; font-size: 0.6rem;">
+                km/h</p>
+            </div>
+            <div class="h-card">
+              <p>Humidity</p>
+              <p id="humidity" class="value">12%</p>
+            </div>
+            <div class="h-card">
+              <p>Air Quality</p>
+              <p id="air" class="value">105</p>
+            </div>
+            <div class="h-card">
+              <p>Pressure</p>
+              <p id="pressure" class="value">1020</p>
+            </div>
+            <div class="h-card">
+              <p>Feels Like</p>
+              <p id="feels_temp" class="value">1020</p>
+            </div>
+            <div class="h-card">
+              <p>Visibility</p>
+              <p id="visibility" class="value">1020</p>
+            </div>
+            <div class="h-card">
+              <p>UV Index</p>
+              <p id="uv_index" class="value">5</p>
+            </div>
+          </div>
+        </div>
+    </hero-row>
+  </section>
+  <!-- <section id="week">
+    <div><h4>Weekly Forecast</h4></div>
+    <div class="weekly-card">
+      <div id="h-card" class="h-card" style=" color: #585858; opacity: 70%;" value="Sunday">Sunday<img src="public/images/animated/cloudy-day-3.svg" alt=""></div>
+      <div id="h-card" class="h-card" style=" color: #585858; opacity: 70%;" value="Monday">Monday<img src="public/images/animated/rainy-7.svg" alt=""></div>
+      <div id="h-card" class="h-card" style=" color: #585858; opacity: 70%;" value="Tuesday">Tuesday<img src="public/images/animated/snowy-2.svg" alt=""></div>
+      <div id="h-card" class="h-card" style=" color: #585858; opacity: 70%;" value="Wedneday">Wedneday<img src="public/images/animated/thunder.svg" alt=""></div>
+      <div id="h-card" class="h-card" style=" color: #585858; opacity: 70%;" value="Thursday">Thursday<img src="public/images/animated/cloudy.svg" alt=""></div>
+      <div id="h-card" class="h-card" style=" color: #585858; opacity: 70%;" value="Friday">Friday<img src="public/images/animated/cloudy-day-3.svg" alt=""></div>
+    </div><br><br>
+  </section> -->
+  <footer id="contact">
+    <div>
+      <div>
+        <h2>Contact me</h2>
+        <a style="color: var(--text-color-2); font-weight:lighter; font-size:smaller; filter: opacity(85%)"
+          href="mailto:newazbenalam@gmail.com"><em>newazbenalam@gmail.com</em></a>
+      </div>
+      <div style="cursor: pointer; color: var(--text-color-2);">
+        <span>Linkedin</span>
+        <span>Facebook</span>
+        <a style="color: var(--text-color-2);" href="https://github.com/newazbenalam"> <span>GitHub</span></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2024 All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
