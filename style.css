@@ -198,6 +198,7 @@ nav div {
 .hidden-helper{
   visibility: hidden;
   position: absolute;
+  height: 0px !important;
 }
 
 hero-row {
