@@ -105,6 +105,7 @@ async function onSearch() {
 }
 
 function moredetails(data) {
+  document.getElementById("result-view").innerHTML = "";
   var heroRow = document.getElementsByTagName("hero-row")[0];
   heroRow.className = heroRow.className.replace("hidden-helper", "");
 
