@@ -104,16 +104,16 @@ async function onSearch() {
   });
 }
 
-function moredetails(data) {
-  document.getElementById("result-view").innerHTML = "";
+async function moredetails(data) {
   var heroRow = document.getElementsByTagName("hero-row")[0];
   heroRow.className = heroRow.className.replace("hidden-helper", "");
 
   var searchRow = document.getElementsByTagName("search-row")[0];
   searchRow.className = "hidden-helper";
 
-  foo(`${data.value}`);
-  cast(`${data.value}`);
+  await foo(`${data.value}`);
+  await cast(`${data.value}`);
+  document.getElementById("result-view").innerHTML = "";
 }
 
 function darkMode() {
@@ -193,12 +193,12 @@ async function fetchCast(location) {
 
 async function cast(location) {
   var cname = location;
-  document.getElementById("details-box").innerHTML = '';
+  document.getElementById("details-box").innerHTML = "";
   var oldContent = document.getElementById("details-box");
   var data = await connectSearch(cname);
 
   data.forEach((item) => {
-    console.log(item.name.common +' ' +  location);
+    console.log(item.name.common + " " + location);
     if (item.name.common == location) {
       var newContent = document.createElement("div");
       newContent.className = "w-card height-unset";
