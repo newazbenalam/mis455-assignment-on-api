@@ -16,7 +16,7 @@
       <a href="#hero" class="day-bar active">Today</a>
       <a href="#week" class="day-bar #active">Week</a>
     </div> -->
-    <input class="text-area" hidden placeholder="Location..." id="searchbar" data-vaue="">
+    <!-- <input class="text-area" hidden placeholder="Location..." id="searchbar" data-vaue=""> -->
     <div>
       <!-- <a href="#" class="toggle-temp">27°C</a> -->
       <a href="#" onclick="darkMode()" class="dark-mode">☾</a>
@@ -25,64 +25,99 @@
     </div>
   </nav>
   <section id="hero">
+    <div>
+      <input class="w-card-search" type="search" name="" id="searchid">
+      <input type="button" value="Search" class="search-btn" onclick="onSearch()">
+    </div>
+    <br><br>
     <search-row>
       <div>
-        <input class="w-card-search" type="search" name="" id="searchid">
-        <input type="button" value="Search" class="search-btn" onclick="onSearch()">
-      </div>
-      <br><br>
-      <div>
-        <p style="margin-bottom: 15px; filter: drop-shadow(0px 0px 100px #929094bb); font-weight: 500;">Popular Search
+        <p id="middle-title"
+          style="margin-bottom: 15px; filter: drop-shadow(0px 0px 100px #929094bb); font-weight: 500;">Popular Search
         </p>
       </div>
       <br>
       <div class="flex-view-popular" id="result-view">
         <div class="item-popular">
           <p>Southern Asia</p>
-          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/bd.png" alt=""> Bangladesh</p>
-          <p >Capital: Dhaka</p>
-          <p >Language: Bengali</p>
-          <p >Currencies: Taka / BDT / ৳</p>
-          <p >UTC+06:00</p>
-          <p >More</p>
+          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/bd.png"
+              alt=""> Bangladesh</p>
+          <p>Capital: Dhaka</p>
+          <p>Language: Bengali</p>
+          <p>Currencies: BDT/৳</p>
+          <p>UTC+06:00</p>
+          <button onclick="moredetails(this)" value="Bangladesh" style="font-weight: 600;
+          background: none; border: none; color: #3f3f3f; text-decoration: none; cursor: pointer;">More
+            details</button>
+        </div>
+
+        <div class="item-popular">
+          <p>South-Eastern Asia</p>
+          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/sg.png"
+              alt=""> Singapore</p>
+          <p>Capital: Singapore</p>
+          <p>Language: English</p>
+          <p>Currencies: SGD/$</p>
+          <p>UTC+08:00</p>
+          <button onclick="moredetails(this)" value="Singapore" style="font-weight: 600;
+          background: none; border: none; color: #3f3f3f; text-decoration: none; cursor: pointer;">More
+            details</button>
         </div>
         <div class="item-popular">
           <p>Southern Asia</p>
-          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/bd.png" alt=""> Bangladesh</p>
-          <p >Capital: Dhaka</p>
-          <p >Language: Bengali</p>
-          <p >Currencies: Taka / BDT / ৳</p>
-          <p >UTC+06:00</p>
+          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/in.png"
+              alt=""> India</p>
+          <p>Capital: New Delhi</p>
+          <p>Language: English</p>
+          <p>Currencies: INR/₹</p>
+          <p>UTC+05:30</p>
+          <button onclick="moredetails(this)" value="India" style="font-weight: 600;
+          background: none; border: none; color: #3f3f3f; text-decoration: none; cursor: pointer;">More
+            details</button>
+
         </div>
+
+
         <div class="item-popular">
-          <p>Southern Asia</p>
-          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/bd.png" alt=""> Bangladesh</p>
-          <p >Capital: Dhaka</p>
-          <p >Language: Bengali</p>
-          <p >Currencies: Taka / BDT / ৳</p>
-          <p >UTC+06:00</p>
+          <p>Eastern Asia</p>
+          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/jp.png"
+              alt=""> Japan</p>
+          <p>Capital: Tokyo</p>
+          <p>Language: Japanese</p>
+          <p>Currencies: JPY/¥</p>
+          <p>UTC+09:00</p>
+          <button onclick="moredetails(this)" value="Japan" style="font-weight: 600;
+          background: none; border: none; color: #3f3f3f; text-decoration: none; cursor: pointer;">More
+            details</button>
+
         </div>
+
         <div class="item-popular">
-          <p>Southern Asia</p>
-          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/bd.png" alt=""> Bangladesh</p>
-          <p >Capital: Dhaka</p>
-          <p >Language: Bengali</p>
-          <p >Currencies: Taka / BDT / ৳</p>
-          <p >UTC+06:00</p>
-        </div>
-        <div class="item-popular">
-          <p>Southern Asia</p>
-          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/bd.png" alt=""> Bangladesh</p>
-          <p >Capital: Dhaka</p>
-          <p >Language: Bengali</p>
-          <p >Currencies: Taka / BDT / ৳</p>
-          <p >UTC+06:00</p>
+          <p>North America</p>
+          <p id="air" class="value"><img width="40px" style="text-align: center;" src="https://flagcdn.com/w320/us.png"
+              alt=""> United States</p>
+          <p>Capital: Washington, D.C.</p>
+          <p>Language: English</p>
+          <p>Currencies: USD/$</p>
+          <p>UTC-12:00</p>
+          <button onclick="moredetails(this)" value="United States" style="font-weight: 600;
+          background: none; border: none; color: #3f3f3f; text-decoration: none; cursor: pointer;">More
+            details</button>
+
         </div>
 
       </div>
     </search-row>
 
-    <hero-row>
+    <hero-row class="hidden-helper">
+      <!-- <div>
+        <div style="display: flex; flex-direction: row; align-items: flex-end;" >
+          <input class="w-card-search" style="width: unset;" type="search" name="" id="searchid">
+          <input type="button" value="Search" class="search-btn" onclick="onSearch()">
+        </div>
+        <br><br>
+        <br><br>
+        <br><br> -->
       <div>
         <div>
           <img class="weather-preview" src="public/images/animated/rainy-2.svg" alt="temperature">
@@ -90,102 +125,26 @@
             style="position: relative; display: flex; justify-content: center; flex-wrap: unwarp;  bottom: -50px; transform: scale(0.7); gap: 0; min-width: 253px; margin: auto;">
             <div class="t-card h-card" style="background: none; width: 100px;">
               <p>Min Temp</p>
-              <p id="min_temp" class="value" style=" font-size: 1.5rem;">5</p>
+              <p id="min_temp" class="value" style=" font-size: 1.5rem;">26°C</p>
             </div>
             <div class="t-card h-card" style="background: none; width: 100px;">
               <p>Max Temp</p>
-              <p id="max_temp" class="value" style=" font-size: 1.5rem;">5</p>
+              <p id="max_temp" class="value" style=" font-size: 1.5rem;">31°C</p>
             </div>
           </div>
-          <h1 id="temp" class="temp-indicator">25°C</h1>
-          <div id="condition" style="font-weight: 500; opacity: 65%; position: relative; bottom: 30px;">
-            Haze
-          </div>
+          <h1 id="temp" class="temp-indicator">26°C</h1>
+          <div id="condition" style="font-weight: 500; opacity: 65%; position: relative; bottom: 30px;">Haze</div>
         </div>
-        <span id="weekday" class="day">Monday, </span><span id="stime">16:00</span>
-        <div id="locat" class="location" style="padding-bottom: 45px;">
-          Dhakka, Null
-        </div>
+        <span id="weekday" class="day">Sunday, </span><span id="stime">23:55</span>
+        <div id="locat" class="location" style="padding-bottom: 45px;">Dhaka</div>
+      </div>
+
       </div>
       <div>
-        <p style="margin-bottom: 15px; filter: drop-shadow(0px 0px 100px #929094bb); font-weight: 500;">5 Day Forecast
+        <p style="margin-bottom: 15px; filter: drop-shadow(0px 0px 100px #929094bb); font-weight: 500;">Area Details
         </p>
-        <div class="forecast-box">
-          <div class="w-card" style="padding-top: 15px;">
-            <p id="f-temp">time 1</p>
-            <img style="margin: -5px 0px -20px 0px; filter: opacity(70%);" src="public/images/animated/cloudy-day-3.svg"
-              alt="">
-            <div id="f-condition" style=" color: #585858;font-weight: 400;">
-              Haze
-            </div>
-            <div>
-              <span id="f-max-temp" class="value">15</span><span class="t-value">°C</span>
-            </div>
-            <div>
-              <span id="f-min-temp" class="value" style="opacity: 50%; font-size: 1.2rem;">15</span><span
-                class="t-value" style="bottom: 7px; font-size: 0.7rem;">°C</span>
-            </div>
-          </div>
-          <div class="w-card" style="padding-top: 15px;">
-            <p id="f-temp">time 1</p>
-            <img style="margin: -5px 0px -20px 0px; filter: opacity(70%);" src="public/images/animated/cloudy-day-3.svg"
-              alt="">
-            <div id="f-condition" style=" color: #585858;font-weight: 400;">
-              Haze
-            </div>
-            <div>
-              <span id="f-max-temp" class="value">15</span><span class="t-value">°C</span>
-            </div>
-            <div>
-              <span id="f-min-temp" class="value" style="opacity: 50%; font-size: 1.2rem;">15</span><span
-                class="t-value" style="bottom: 7px; font-size: 0.7rem;">°C</span>
-            </div>
-          </div>
-          <div class="w-card" style="padding-top: 15px;">
-            <p id="f-temp">time 1</p>
-            <img style="margin: -5px 0px -20px 0px; filter: opacity(70%);" src="public/images/animated/cloudy-day-3.svg"
-              alt="">
-            <div id="f-condition" style=" color: #585858;font-weight: 400;">
-              Haze
-            </div>
-            <div>
-              <span id="f-max-temp" class="value">15</span><span class="t-value">°C</span>
-            </div>
-            <div>
-              <span id="f-min-temp" class="value" style="opacity: 50%; font-size: 1.2rem;">15</span><span
-                class="t-value" style="bottom: 7px; font-size: 0.7rem;">°C</span>
-            </div>
-          </div>
-          <div class="w-card" style="padding-top: 15px;">
-            <p id="f-temp">time 1</p>
-            <img style="margin: -5px 0px -20px 0px; filter: opacity(70%);" src="public/images/animated/cloudy-day-3.svg"
-              alt="">
-            <div id="f-condition" style=" color: #585858;font-weight: 400;">
-              Haze
-            </div>
-            <div>
-              <span id="f-max-temp" class="value">15</span><span class="t-value">°C</span>
-            </div>
-            <div>
-              <span id="f-min-temp" class="value" style="opacity: 50%; font-size: 1.2rem;">15</span><span
-                class="t-value" style="bottom: 7px; font-size: 0.7rem;">°C</span>
-            </div>
-          </div>
-          <div class="w-card" style="padding-top: 15px;">
-            <p id="f-temp">time 1</p>
-            <img style="margin: -5px 0px -20px 0px; filter: opacity(70%);" src="public/images/animated/cloudy-day-3.svg"
-              alt="">
-            <div id="f-condition" style=" color: #585858;font-weight: 400;">
-              Haze
-            </div>
-            <div>
-              <span id="f-max-temp" class="value">15</span><span class="t-value">°C</span>
-            </div>
-            <div>
-              <span id="f-min-temp" class="value" style="opacity: 50%; font-size: 1.2rem;">15</span><span
-                class="t-value" style="bottom: 7px; font-size: 0.7rem;">°C</span>
-            </div>
-          </div>
+        <div id="details-box" class="forecast-box">
+
         </div>
         <p id="highlight" style="margin-bottom: 15px; filter: drop-shadow(0px 0px 100px #929094bb); font-weight: 500;">
           Today's Highlight</p>

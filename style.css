@@ -85,7 +85,7 @@ nav {
   /* color: var(--text-color) !important; */
   /* background: blanchedalmond; */
   align-items: center;
-  height: 40px;
+  height: 50px;
   width: 70%;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(var(--blur-intensity));
@@ -177,7 +177,8 @@ nav div {
 }
 
 #hero {
-  padding-top: 200px;
+  /* padding-top: 200px; */
+  padding-top: 100px;
   padding-bottom: 50px;
   background: linear-gradient(0deg, var(--primary-color) 0%, var(--bg-color) 60%);
   /* background: linear-gradient(0deg, #868bb9 0%, #261b2e 60%); */
@@ -190,18 +191,21 @@ nav div {
   transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-search-row{
-  /* visibility: hidden; */
-  /* position: absolute; */
+.height-unset{
+  height: unset !important;
+}
+
+.hidden-helper{
+  visibility: hidden;
+  position: absolute;
 }
 
 hero-row {
-  visibility: hidden;
-  position: absolute;
+  margin-top: 50px;
   width: 60%;
   /* max-width: 1200px; */
   margin: auto;
-  padding: 0 20% 0 20%;
+  padding: 60px 20% 4% 20%;
   margin: auto;
   /* position: absolute; */
   display: flex;
